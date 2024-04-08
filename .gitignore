@@ -1,0 +1,5 @@
+# pyenv
+.python-version
+
+# Environments
+rvm-gui-venv/

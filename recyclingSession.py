@@ -3,7 +3,6 @@ import json
 from datetime import datetime
 from authentication import QRCodeAuthentication
 
-
 classes = [
  'BOTTLE_0,5_SAFIA',
  'BOTTLE_0,5_ROYALE',

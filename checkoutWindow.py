@@ -1,11 +1,10 @@
 import customtkinter
 from PIL import Image, ImageTk
-from topLevelNotificationWindow import ToplevelWindow, ToplevelWarningWindow, ToplevelErrorWindow, ToplevelSuccessWindow
+from topLevelNotificationWindow import ToplevelWindow, ToplevelErrorWindow, ToplevelSuccessWindow
 from couponWindow import CouponWindow
 import ressources
 
 class CheckoutWindow(ToplevelWindow):
-    
     def __init__(self, *args, **kwargs):
         super().__init__(600, 600, *args, **kwargs)
         self.center_window()

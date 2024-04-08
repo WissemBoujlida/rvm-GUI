@@ -1,12 +1,8 @@
-import tkinter as tk
 import customtkinter
-import cv2
-import numpy as np
 from PIL import Image, ImageTk
-from topLevelNotificationWindow import ToplevelWindow, ToplevelWarningWindow, ToplevelErrorWindow, ToplevelSuccessWindow
+from topLevelNotificationWindow import ToplevelWarningWindow
 from topLevelRecyclingWindow import ToplevelRecyclingWindow
 from topLevelAuthenticationWindow import ToplevelAuthenticationWindow
-from recyclingSession import RecyclingSession
 import ressources
 
 customtkinter.set_default_color_theme("ressources/blue.json")
@@ -24,7 +20,6 @@ class App(customtkinter.CTk):
         self.background_label.image = background_image
         self.background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
-
         self.toplevel_reycling_window = None
         self.toplevel_authentication_window = None
         self.warning_window = None
@@ -37,7 +32,6 @@ class App(customtkinter.CTk):
         self.btn_auth.place(relx=.5, rely=.52,anchor= 'center')
         self.btn_recycle.place(relx=.5, rely=.7,anchor= 'center')
         self.btn_problem.place(relx=.5, rely=.87,anchor= 'center')
-
 
     def center_window(self):
         self.update_idletasks()
@@ -67,74 +61,3 @@ class App(customtkinter.CTk):
             self.toplevel_authentication_window = ToplevelAuthenticationWindow()  # create window if its None or destroyed
         else:
             self.toplevel_authentication_window.focus()  # if window exists focus
-    
-
-        
-
-
-
-#app = App()
-
-
-#img_support = ImageTk.PhotoImage(Image.open("ressources/support.png").resize((30, 30), Image.ANTIALIAS))
-#label_support = customtkinter.CTkLabel(app, text="Support 24/7 \n 20666369", font=("Helveita", 15), image=img_support, compound="left", width=200, height=50)
-
-
-
-#label_support.pack(anchor="se")
-#app.mainloop()
-
-"""
-
-
-def print_me():
-    label["text"] = txt.get("1.0", "end")
-
-def delete():
-    listbox.delete((listbox.index(ACTIVE)))
-frame1 = Frame(app, bg="blue")
-btn = Button(frame1, command=print_me, text="click me", width="50", height="10", font="24", bg="black", fg="white", padx=20, pady=50)
-frame2 = Frame(app, bg="red")
-label = Label(frame2, text="suuiii", width="50", height="5", bg="green", fg="white", font="40")
-frame3 = Frame(app, bg="green")
-txt = Text(frame3, width="50", height="5", bg="white", fg="black", font="40")
-
-txt.pack()
-btn.pack()
-label.pack()
-
-btn2 = Button(app, text="btn2", bg="black", fg="white")
-btn2.pack()
-btn2.place(anchor=NW, width=100, height=100, bordermode=OUTSIDE)
-
-#frame1.pack(side=TOP)
-#frame2.pack(side=LEFT)
-#frame3.pack(side=RIGHT)
-
-#frame1.grid(column=1, row=1)
-#frame2.grid(column=1, row=2)
-#frame3.grid(column=1, row=3)
-
-
-
-checkbtn = Checkbutton(app, text="Auto Save", font="14", command=print_me, state="disabled", onvalue=1, offvalue=0)
-checkbtn.pack()
-
-rdbtn1 = Radiobutton(app, text="Male", value=1)
-rdbtn2 = Radiobutton(app, text="female", value=2)
-rdbtn1.pack()
-rdbtn2.pack()
-
-listbox = Listbox(app)
-listbox.insert(1, "OPT1")
-listbox.insert(2, "OPT2")
-listbox.insert(3, "OPT3")
-listbox.pack()
-btndel = Button(app, text="Delete", command=delete)
-btndel.pack()
-
-
-"""
-
-#line = tk.Frame(self.toplevel_reycling_window, height=2, bg='gray')
-#line.pack(fill='x', padx=10, pady=10)

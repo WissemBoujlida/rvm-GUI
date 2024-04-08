@@ -1,6 +1,6 @@
 import customtkinter as ctk
 from PIL import Image, ImageTk
-from topLevelNotificationWindow import ToplevelWindow, ToplevelWarningWindow, ToplevelErrorWindow, ToplevelSuccessWindow
+from topLevelNotificationWindow import ToplevelWindow
 import ressources
 
 class CouponWindow(ToplevelWindow):

@@ -21,7 +21,6 @@ class QRCodeAuthentication:
                 qrcode=data
                 return qrcode 
         
-
     def authenticate(self, qrcode):
         URL_TO_QRCODE_AUTHENTICATION = "https://rvm-production.up.railway.app/rvm/api/qrcode-auth"
         id = qrcode.split(':')[0]
@@ -37,34 +36,3 @@ class QRCodeAuthentication:
             # Make the POST request
         response = requests.post(URL_TO_QRCODE_AUTHENTICATION, headers=headers, data=json_request)
         return response
-
-
-
-        """
-        URL_TO_QRCODE_AUTHENTICATION = "https://rvm-production.up.railway.app/rvm/api/qrcode-auth"
-        try:
-            id = qrcode.split(':')[0]
-            token = qrcode.split(':')[1]
-            request = {}
-            request['id'] = id
-            request['token'] = token
-            # Convert the JSON data to a string
-            json_request = json.dumps(request)
-            headers = {
-                "Content-Type": "application/json"
-            }
-            # Make the POST request
-            response = requests.post(URL_TO_QRCODE_AUTHENTICATION, headers=headers, data=json_request)
-            if (response.status_code == 200):
-                self.is_authenticated=True
-                self.id = id
-                self.token = token
-                return True
-            else:
-                return False
-        except:
-            return False
-            """
-
-
-

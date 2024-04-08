@@ -7,7 +7,6 @@ import cv2
 import ressources
 
 class ToplevelRecyclingWindow(ToplevelWindow):
-    
     def __init__(self, *args, **kwargs):
         super().__init__(600, 600, *args, **kwargs)
         self.center_window()

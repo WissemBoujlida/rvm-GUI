@@ -1,6 +1,6 @@
 import customtkinter
 from PIL import Image, ImageTk
-from topLevelNotificationWindow import ToplevelWindow, ToplevelWarningWindow, ToplevelErrorWindow, ToplevelSuccessWindow
+from topLevelNotificationWindow import ToplevelWindow, ToplevelErrorWindow, ToplevelSuccessWindow
 from topLevelRecyclingWindow import ToplevelRecyclingWindow
 import ressources
 
@@ -36,8 +36,7 @@ class ToplevelAuthenticationWindow(ToplevelWindow):
                 self.open_error_window(label_txt=" Invalid credentials.")
         else:
             self.open_error_window(label_txt=" QR Code scan failed")
-
-    
+  
     def open_success_window(self):
         if self.toplevel_success_window is None or not self.toplevel_success_window.winfo_exists():
             self.toplevel_success_window = ToplevelSuccessWindow(label_txt=" Authentication setup successfully.", btn_txt="Start Recycling", btn_command=self.startRecycling)  # create window if its None or destroy
