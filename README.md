@@ -18,4 +18,7 @@ To run the application on your local machine simply execute the `__init__.py` py
 
 # Application Preview
 
-![alt text](http://url/to/img.png)
+![alt main](https://github.com/WissemBoujlida/rvm-gui/blob/main/app-preview/main.png)
+![alt auth](https://github.com/WissemBoujlida/rvm-gui/blob/main/app-preview/auth.png)
+![alt recycle](https://github.com/WissemBoujlida/rvm-gui/blob/main/app-preview/recycle.png)
+![alt transaction](https://github.com/WissemBoujlida/rvm-gui/blob/main/app-preview/transaction.png)
