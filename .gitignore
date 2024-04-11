@@ -1,5 +1,8 @@
 # pyenv
 .python-version
 
+# pycache
+**/__pycache__
+
 # Environments
-rvm-gui-venv/
+.rvm-gui-venv/
